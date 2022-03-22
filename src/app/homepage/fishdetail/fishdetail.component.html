@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <img [src]="fish.image" alt="" class="img-responsive" style="max-width: 200px;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>{{fish.name}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>${{fish.price}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{fish.description}}</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <label >Quantity:</label>
+            <input class="form-control" type="number" id="quantity" name="quantity" min="1" max="5" #quantity>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 5px;">
+        <div class="col-xs-12">
+            <button class="btn btn-success" (click)="onCartAdded(quantity)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
