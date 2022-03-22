@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -16,6 +15,13 @@ import { AdminhomepageComponent } from './dashboard/adminhomepage/adminhomepage.
 import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 import { InventoryService } from './inventory.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AngularMaterialModule } from './angular-material.module';
+
+
 
 @NgModule({
   declarations: [
@@ -28,15 +34,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FishdetailComponent,
     DashboardComponent,
     AdminhomepageComponent,
-    AddproductComponent
+    AddproductComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    AngularMaterialModule,
+    
   ],
   providers: [FishService,CartService,InventoryService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

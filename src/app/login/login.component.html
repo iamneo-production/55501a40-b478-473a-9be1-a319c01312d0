@@ -1,40 +1,44 @@
-<form >
+<div id="bg">
     <div class="container-fluid">
-        <div class="left mt-5">
-            <div class="card p-5 ">
-                <div class="signup ">    
-                    <form class="form">    
-                            <p id="p">LOGIN</p>
-                            <div>
-                                <input type="text"  placeholder="Enter Email" >    
-                                <br><br>    
-        
-                                
-                                <input type="Password" placeholder="Enter Password">
-                                <br><br>
-        
-                                <a href="index.html">
-                                    <input type="button" name="log" value="LOGIN" class="log">
-                                </a>       
-                                <br><br>    
-                                New User? <a routerLink="/signup">Click here</a>
-                            </div>
-                            
-                    </form>     
+        <div class="row justify-content-center align-center p-5 mt-5">
+          <div class="col-4 text-center">
+            <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+              <mat-card class="box">
+                <mat-card-content>
+                  <mat-card-title>Login</mat-card-title>
+                </mat-card-content>
+            
+                <form class="example-form">
+                    <mat-card-content>
+                        <div class="space">
+                            <mat-form-field>
+                                <input matInput placeholder="Username">
+                            </mat-form-field>
+                        </div>
                         
-                </div>    
+                        <div class="space">
+                            <mat-form-field>
+                                <input matInput placeholder="Password">
+                            </mat-form-field>
+                        </div>
+                        
+                    </mat-card-content>
+                    
+                    <button mat-stroked-button color="primary" class="btn-block" style="width:400px">Login</button>
+                    
+                    <div class="space">
+                        Already a member? <a routerLink="/signup">Click here</a>
+                    </div>
+                </form>
+              </mat-card>
             </div>
-            
+          </div>
+          <div class="col-4">
+            <div class="row mx-5 justify-content-center align-center text-center">
+              <img src="/assets/images/pic2.jpeg" class="logo" alt="Cannot Load Image" style="width:600px;background-position:right;">
+            </div>
+          </div>
         </div>
-    
-        <div class="right">
-            <div class="w-50">
-                <img src="/assets/images/pic.jpeg" class="img-custom"/>
-            </div>
-            
-        </div>    
-    </div>
-    
-  
-  </form>
+      </div>
+</div>
 

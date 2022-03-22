@@ -1,79 +1,11 @@
-body  
-{  
-    margin: 0;  
-    padding: 0;  
-     
-    font-family: 'Arial';
-}
-
-
-.left {
-  left: 0;
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  
-}
-
-
-.right {
-  right: 0;
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
- 
-}
-.signup
+.space
 {
-    text-align: center;
-
-}
-.form
-{
-    padding-top: 80px;
-
-}
-input{
-    border: 2px solid #E1E1E1;
-    border-radius: 15px;
-    border-width: 2px;
-    width: 300px;
-    height: 40px;
-
-}
-.log
-{
-    background-color: darkblue;
-    width: 100px;
-    color: #FFFFFF;
-}
-::placeholder
-{
-    padding-left: 4px;
-    color: #C4C4C4;
-}
-#p{
-    font-family: Arial;
-    font-size: 30px;
-}
-a
-{
-    color: darkblue;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
-.img-custom{
-    padding-top: 100px;
+#bg
+{
+    background-color: rgb(200, 237, 243);
 }
 
-.card
-{
-    border-color: white;
-}
