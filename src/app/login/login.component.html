@@ -8,18 +8,21 @@
                   <mat-card-title>Login</mat-card-title>
                 </mat-card-content>
             
-                <form class="example-form">
+                <form [formGroup]=LoginForm>
                     <mat-card-content>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Username">
+                                <input matInput placeholder="Username" formControlName="name">
                             </mat-form-field>
+                            <div *ngIf="name && name.invalid && name.touched" style="color:red">Invalid Username</div>
+
                         </div>
                         
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Password">
+                                <input type="password" matInput placeholder="Password" formControlName="pass">
                             </mat-form-field>
+                            <div *ngIf="pass && pass.invalid && pass.touched" style="color:red">Invalid Password</div>
                         </div>
                         
                     </mat-card-content>

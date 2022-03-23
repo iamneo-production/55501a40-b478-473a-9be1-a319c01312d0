@@ -14,9 +14,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './dashboard/adminhomepage/adminhomepage.component';
 import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 import { InventoryService } from './inventory.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AngularMaterialModule } from './angular-material.module';
@@ -40,12 +40,12 @@ import { AngularMaterialModule } from './angular-material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     FormsModule,
     MatToolbarModule,
     MatFormFieldModule,
     AngularMaterialModule,
-    
+    ReactiveFormsModule,
+
   ],
   providers: [FishService,CartService,InventoryService],
   bootstrap: [AppComponent],

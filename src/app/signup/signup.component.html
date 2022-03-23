@@ -8,32 +8,43 @@
                   <mat-card-title>Sign-Up</mat-card-title>
                 </mat-card-content>
             
-                <form>
+                <form [formGroup]=SignupForm>
                     <mat-card-content>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Email">
+                                <input matInput placeholder="Email" formControlName="email"> 
                             </mat-form-field>
+                            <div *ngIf= "email && email.invalid && email.touched" style="color:red">Enter Valid Email (abc@gmail.com) </div>
                         </div>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Username">
+                                <input matInput placeholder="Username" formControlName="name">
                             </mat-form-field>
+                            <div *ngIf= "name && name.invalid && name.touched" style="color:red">Invalid name</div>
+
                         </div>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Mobile Number">
+                                <input matInput placeholder="Mobile Number" formControlName="mno">
                             </mat-form-field>
+                            <div *ngIf= "mno && mno.invalid && mno.touched" style="color:red">Invalid Mobile Number</div>
+
                         </div>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Password">
+                                <input type="password" matInput placeholder="Password" formControlName="pass">
                             </mat-form-field>
+                            <div *ngIf= "pass && pass.invalid && pass.touched" style="color:red">Invalid Password</div>
+
                         </div>
                         <div class="space">
                             <mat-form-field>
-                                <input matInput placeholder="Confirm Password">
+                                <input type="password" matInput placeholder="Confirm Password" formControlName="cpass">
                             </mat-form-field>
+                            <div *ngIf= "SignupForm.hasError('notSame')"style="color:red">
+                                Passwords do not match
+                            </div>
+
                         </div>
                         
                     </mat-card-content>
