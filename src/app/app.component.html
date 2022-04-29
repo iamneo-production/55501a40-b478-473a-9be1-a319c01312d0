@@ -1,11 +1,16 @@
 <mat-toolbar color="primary">
     <div class="container">
-        <a routerLink="/login"><div class="logo"><h1 class="space" style="font-size:30px;"><img src="/assets/images/icon.png" alt="#" style="height: 50px;"> Fish Landia</h1></div></a>
+        <a routerLink="/login">
+            <div class="logo">
+                <h1 class="space" style="font-size:30px;"><img src="/assets/images/icon.png" alt="#"
+                        style="height: 50px;"> Fish Landia</h1>
+            </div>
+        </a>
     </div>
-    <a routerLink="/home"><span class="space">Home</span></a>  
+    <a routerLink="/home"><span class="space">Home</span></a>
     <a routerLink="/cart"><span class="space">Cart</span></a>
-    <a routerLink="/order"><span class="space">MyOrders</span></a>
+    <a routerLink="/orders"><span class="space">MyOrders</span></a>
     <a routerLink="/login"><span class="space">LogOut</span></a>
 </mat-toolbar>
-  
+
 <router-outlet></router-outlet>

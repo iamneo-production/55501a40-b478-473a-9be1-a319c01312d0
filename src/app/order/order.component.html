@@ -1,25 +1,26 @@
-<div class="container">
-    <div class="col-lg-12">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Product Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let singlefish of cart">
-                    <td>{{singlefish.fish.name}}</td>
-                    <td>${{singlefish.fish.price}}</td>
-                    <td>{{singlefish.quantity}}</td>
-                </tr>
-            </tbody>
-        </table>
+<body id="bg">
+    <div class="container">
+        <div class="col-lg-12 p-5 mt-5">
+            <table class="table tablecolor">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let singlefish of cart">
+                        <td>{{singlefish.fish.name}}</td>
+                        <td>${{singlefish.fish.price}}</td>
+                        <td>{{singlefish.quantity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer" *ngIf="cart.length!==0">
+            <h4>Total Bill: ${{total}}</h4>
+            <button class="btn btn-default pull-right" (click)="onOrderPlaced()">Pay</button>
+        </div>
     </div>
-    <div class="footer"  *ngIf="cart.length!==0"> 
-        <h4>Total Bill: ${{total}}</h4>
-        <button class="btn btn-default pull-right" (click)="onOrderPlaced()">Pay</button>
-    </div>
-</div>
-
+</body>

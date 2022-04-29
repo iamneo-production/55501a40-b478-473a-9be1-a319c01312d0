@@ -1,0 +1,13 @@
+#bg {
+    background-image: url("src\assets\images\cart.png");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(200, 237, 243);
+    background-blend-mode: darken;
+
+}
+
+.tablecolor {
+    background-color: rgb(255, 255, 255);
+}

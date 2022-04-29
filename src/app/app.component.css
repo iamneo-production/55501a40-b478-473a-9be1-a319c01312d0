@@ -1,7 +1,14 @@
-.space
-{
+.space {
     padding-left: 20px;
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+    text-transform: decoration;
+}
+
+a:hover {
+    text-decoration: none;
+}

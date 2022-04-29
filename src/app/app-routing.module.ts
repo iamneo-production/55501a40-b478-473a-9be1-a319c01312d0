@@ -9,15 +9,20 @@ import { OrderComponent } from "./order/order.component";
 import { SignupComponent } from "./signup/signup.component";
 
 const routes: Routes = [
-  {path:'' , redirectTo:'/login' , pathMatch:'full'},
-    {path: 'login', component: LoginComponent},
-    {path: 'signup', component: SignupComponent },
-    {path: 'home', component: HomepageComponent, children:[
-        {path: ':id', component: FishdetailComponent}
-    ]},
-    {path:'addproduct', component: DashboardComponent},
-    {path: 'cart' , component: CartComponent},
-    {path : 'orders' , component: OrderComponent}
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'orders', component: OrderComponent },
+
+  {
+    path: 'home', component: HomepageComponent, children: [
+      { path: ':id', component: FishdetailComponent }
+
+    ]
+  },
+  { path: 'addproduct', component: DashboardComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'orders', component: OrderComponent }
 ];
 
 @NgModule({
