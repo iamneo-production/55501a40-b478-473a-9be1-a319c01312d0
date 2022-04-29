@@ -1,0 +1,9 @@
+.space {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#bg {
+    background-image: url("src\assets\images\bg1.webp");
+    background-size: cover;
+}

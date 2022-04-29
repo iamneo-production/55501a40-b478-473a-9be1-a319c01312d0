@@ -1,0 +1,72 @@
+<body id="bg">
+    <div id="bg">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-center p-5 mt-5">
+                <div class="col-4 text-center">
+                    <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+                        <mat-card class="box">
+                            <mat-card-content>
+                                <mat-card-title>Sign-Up</mat-card-title>
+                            </mat-card-content>
+
+                            <form [formGroup]=SignupForm>
+                                <mat-card-content>
+                                    <div class="space">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Email" formControlName="email">
+                                        </mat-form-field>
+                                        <div *ngIf="email && email.invalid && email.touched" style="color:red">Enter
+                                            Valid Email (abc@gmail.com) </div>
+                                    </div>
+                                    <div class="space">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Username" formControlName="name">
+                                        </mat-form-field>
+                                        <div *ngIf="name && name.invalid && name.touched" style="color:red">Invalid name
+                                        </div>
+
+                                    </div>
+                                    <div class="space">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Mobile Number" formControlName="mno">
+                                        </mat-form-field>
+                                        <div *ngIf="mno && mno.invalid && mno.touched" style="color:red">Invalid Mobile
+                                            Number</div>
+
+                                    </div>
+                                    <div class="space">
+                                        <mat-form-field>
+                                            <input type="password" matInput placeholder="Password"
+                                                formControlName="pass">
+                                        </mat-form-field>
+                                        <div *ngIf="pass && pass.invalid && pass.touched" style="color:red">Invalid
+                                            Password</div>
+
+                                    </div>
+                                    <div class="space">
+                                        <mat-form-field>
+                                            <input type="password" matInput placeholder="Confirm Password"
+                                                formControlName="cpass">
+                                        </mat-form-field>
+                                        <div *ngIf="SignupForm.hasError('notSame')" style="color:red">
+                                            Passwords do not match
+                                        </div>
+
+                                    </div>
+
+                                </mat-card-content>
+
+                                <button mat-stroked-button color="primary" class="btn-block">Sign-up</button>
+
+                                <div class="space">
+                                    Already a member? <a routerLink="/login">Login</a>
+                                </div>
+                            </form>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
