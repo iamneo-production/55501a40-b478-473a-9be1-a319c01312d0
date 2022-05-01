@@ -1,0 +1,67 @@
+<div class="container">
+    <form style="padding-top: 20px;" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" 
+                    class="form-control" 
+                    formControlName="name"
+                    placeholder="product name" >
+                    <!-- <span 
+                    *ngIf="!productForm.get('name').valid && productForm.get('name').touched"
+                    class="help-block">
+                        please enter a name
+                    </span> -->
+                </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-xs-4">
+                    <label for="detail"><b>Product Detail</b></label>
+                    <input type="text"
+                    formControlName="description"
+                     class="form-control"
+                      placeholder="product detail" >
+                </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-xs-4">
+                    <label for="price"><b>Price</b></label>
+                    <input type="number"
+                    formControlName="price"
+                     class="form-control" 
+                     placeholder="Enter price" >
+                </div>
+            </div>
+    
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-xs-4">
+                    <label for="quantity"><b>Quantity</b></label>
+                    <input type="number" 
+                    formControlName="quantity"
+                    class="form-control" 
+                    placeholder="Enter quantity" >
+                </div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-xs-4">
+                    <label for="image"><b>Image Url</b></label>
+                    <input type="text"
+                    formControlName="image"
+                     class="form-control" 
+                     placeholder="Enter Url" >
+                </div>
+            </div>
+    
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-xs-4">
+                    <button type="submit"  class="btn btn-primary"  [disabled]="!mode === false">ADD</button>
+                    <button type="submit" class="btn btn-primary"  [disabled]="!mode ===true">Update</button>
+                </div>
+            </div>  
+        </div>      
+      
+      </form>
+    
+</div>
