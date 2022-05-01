@@ -1,0 +1,45 @@
+<body id="bg">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7" style="float: left;">
+                <table class="table" style="padding-top: 50px;">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let singlefish of Invent;let i = index">
+                            <td><img [src]="singlefish.fish.image" alt="" style="max-height: 50px;"></td>
+                            <td>{{singlefish.fish.name}}</td>
+                            <td>${{singlefish.fish.price}}</td>
+                            <td>{{singlefish.quantity}}
+                                <a style="padding-left: 10px;" (click)="onDelete(i)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                                <a style="padding-left: 20px;" (click)="onedit(singlefish)">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- <div class="container" >  -->
+            <div class="col-sm-4" style="float: right;">
+                <h3>Add Product</h3>
+                <app-addproduct></app-addproduct>
+            </div>
+
+            <!-- </div> -->
+        </div>
+    </div>
+
+</body>
+<!-- </div> -->
